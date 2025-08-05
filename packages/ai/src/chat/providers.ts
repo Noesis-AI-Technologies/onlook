@@ -68,7 +68,10 @@ export async function initModel({
 }
 
 async function getAnthropicProvider(model: CLAUDE_MODELS): Promise<LanguageModelV1> {
-    const anthropic = createAnthropic();
+    const anthropic = createAnthropic({
+        apiKey: process.env.ANTHROPIC_API_KEY,
+        baseURL: process.env.ANTHROPIC_BASE_URL,
+    });
     return anthropic(model, {
         cacheControl: true,
     });

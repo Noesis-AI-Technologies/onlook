@@ -33,6 +33,7 @@ export const env = createEnv({
 
         // Model providers
         ANTHROPIC_API_KEY: z.string(),
+        ANTHROPIC_BASE_URL: z.string().optional(),
         OPENROUTER_API_KEY: z.string().optional(),
         GOOGLE_AI_STUDIO_API_KEY: z.string().optional(),
         OPENAI_API_KEY: z.string().optional(),
@@ -103,6 +104,7 @@ export const env = createEnv({
 
         // Model providers
         ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+        ANTHROPIC_BASE_URL: process.env.ANTHROPIC_BASE_URL,
         GOOGLE_AI_STUDIO_API_KEY: process.env.GOOGLE_AI_STUDIO_API_KEY,
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,
         OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
